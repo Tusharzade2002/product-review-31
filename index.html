@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product preview page</title>
+    <style>
+        #main-image{
+            height: 300px;
+            object-fit: cover;
+            border: 1px rgb(100, 195, 221) solid;
+            border-radius:10px;
+            box-shadow: 0px 0px 10px 0px rgb(43, 42, 42) ;
+            padding: 3px;
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        .image-container{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .images{
+            height: 60px;
+            width: 40px;
+            border: 1px skyblue solid;
+            border-radius: 3px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    
+    <img src="imagenothing1.webp" id="main-image"/>
+    <div class="image-container">
+          <img src="imagenothing1.webp" class="images" onclick="imageschange(1)"/>
+          <img src="imagenothing2.webp" class="images" onclick="imageschange(2)"/> 
+          <img src="imagenothing3.webp" class="images" onclick="imageschange(3)"/> 
+          <img src="imagenothing4.webp" class="images" onclick="imageschange(4)"/> 
+          <img src="imagenothing5.jpeg" class="images" onclick="imageschange(5)"/>   
+    </div>
+    <script>
+        function imageschange(num){
+            let mainimageElement = document.getElementById("main-image")
+
+        if (num==1){
+            mainimageElement.src="imagenothing1.webp";
+        }
+        else if(num==2){
+               mainimageElement.src="imagenothing2.webp";
+        }
+        else if(num == 3){
+               mainimageElement.src="imagenothing3.webp";
+        }
+        else if(num == 4){
+               mainimageElement.src="imagenothing4.webp";
+        }
+        else{
+               mainimageElement.src="imagenothing5.jpeg";
+        }
+    }
+        // function image1(){
+        //       mainimageElement.src="imagenothing1.webp"
+        // }
+        // function image2(){
+        //       mainimageElement.src="imagenothing2.webp"
+        // }
+        // function image3(){
+        //       mainimageElement.src="imagenothing3.webp"
+        // }
+        // function image4(){
+        //       mainimageElement.src="imagenothing4.webp"
+        // }
+        // function image5(){
+        //       mainimageElement.src="imagenothing5.jpeg"
+        // }
+    </script>
 </body>
 </html>
